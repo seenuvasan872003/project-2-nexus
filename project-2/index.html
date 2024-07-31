@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Restaurant Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="restaurant-container" id="restaurantContainer" style="display: none;">
+        <h1>Food Details</h1>
+        <div class="food-details" id="foodDetails"></div>
+        <h1>Food Offers</h1>
+        <div class="food-offers" id="foodOffers"></div>
+        <h1>Rate the Food</h1>
+        <div class="food-rating" id="foodRating"></div>
+        <h1>Other Users' Ratings</h1>
+        <div class="user-ratings" id="userRatings"></div>
+        <h1>Restaurant Location</h1>
+        <div class="restaurant-location" id="restaurantLocation">
+            <p>123 Food Street, Food City</p>
+            <p><a href="https://maps.google.com/?q=123+Food+Street,+Food+City" target="_blank">View on Google Maps</a></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-container login-container active" id="loginContainer">
+            <form id="loginForm">
+                <h1>Login</h1>
+                <input type="email" placeholder="Email" id="loginEmail" required>
+                <input type="password" placeholder="Password" id="loginPassword" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+            </form>
+        </div>
+        <div class="form-container signup-container" id="signupContainer">
+            <form id="signupForm">
+                <h1>Sign Up</h1>
+                <input type="text" placeholder="Name" id="signupName" required>
+                <input type="email" placeholder="Email" id="signupEmail" required>
+                <input type="password" placeholder="Password" id="signupPassword" required>
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+                <span class="error-message" id="errorMessage"></span>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

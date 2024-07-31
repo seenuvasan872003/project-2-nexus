@@ -1,0 +1,338 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: url('bgimage.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    color: #fff;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.restaurant-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.food-details, .food-offers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+   
+}
+
+.restaurant-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(100% / 5 - 20px); /* 5 items per row */
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.food-offers .restaurant-card {
+    width: calc(100% / 4 - 20px); /* 3 items per row */
+}
+
+.restaurant-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.restaurant-card h2 {
+    margin: 10px 0;
+}
+
+.restaurant-card p {
+    color: #555;
+}
+
+.food-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.food-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.food-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.food-modal-close:hover,
+.food-modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.food-modal h2 {
+    margin: 0 0 20px;
+}
+
+.food-modal p {
+    margin: 0 0 10px;
+}
+
+.food-modal input {
+    margin-bottom: 10px;
+    width: 60px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    width: 400px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+
+
+/* Hide the inactive form container */
+.form-container {
+    display: none;
+}
+
+/* Show the active form container */
+.form-container.active {
+    display: flex;
+}
+
+
+
+
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input, button {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background: #6a11cb;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ab1bff;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+}
+
+
+
+.showFoodModal-img{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
+
+
+
+
+
+
+
+/* Add additional styles for new sections */
+
+/* Flex container for food details and offers */
+.food-details, .food-offers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.restaurant-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    /* width: 200px; */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.restaurant-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Flex container for food rating and user ratings */
+.food-rating, .user-ratings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+
+
+
+.rating-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    width: 400px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.rating-card h4 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.rating-card p {
+    margin: 5px 0;
+}
+
+.food-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.food-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.food-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.food-modal-close:hover,
+.food-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+#ratingForm{
+    display: contents;
+}
+
+
+
+#userRatings{
+    display: flex;
+    flex-direction: row;
+    /* width: calc(100% / 4 - 20px); */
+}
